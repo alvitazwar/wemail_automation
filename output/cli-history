@@ -1,0 +1,46 @@
+
+
+<<< Recorded commands on Wed Aug 19 2020 13:14:49 GMT+0600 (Bangladesh Standard Time)
+I.fillField('Requires PHP Version','7.0');
+I.fillField('Requires WordPress Version','5.2');
+
+<<< Recorded commands on Thu Aug 20 2020 15:01:24 GMT+0600 (Bangladesh Standard Time)
+I.click('Skip');
+I.click('Skip');
+I.click('Next');
+I.click('Copy');
+I.click('Done');
+I.click('Done');
+
+<<< Recorded commands on Thu Aug 20 2020 15:25:38 GMT+0600 (Bangladesh Standard Time)
+I.say('copy');
+
+<<< Recorded commands on Thu Aug 20 2020 15:28:38 GMT+0600 (Bangladesh Standard Time)
+I.say('$copy');
+I. exit
+
+<<< Recorded commands on Tue Aug 25 2020 00:31:59 GMT+0600 (Bangladesh Standard Time)
+I.click('envato plg test');
+I.click('Releases');
+I.click('Add New Release');
+I.fillField('Version','2.0');
+I.click('Release Date');
+I.click('//div[4]/div/div/div/div/div[2]/div[2]/table/tbody/tr[5]/td[4]/div');
+I.fillField('Changelog','This is tested by BDD');
+I.fillField('File Name','Demo test');
+
+<<< Recorded commands on Thu Sep 10 2020 11:58:43 GMT+0600 (Bangladesh Standard Time)
+I.click('//*[@id="app"]/section/section/header/div[2]/a');
+I.click('Teams');
+I.click('New Team');
+I.fillField('Team Name','automated create');
+I.fillField('//*[@id="app"]//section/main//div[2]/form/div[1]/div[2]/div/span/input','Auto team');
+I.fillField('//*[@id="app"]/section/section/main/div/div/div/div/div[2]/form/div[3]/div[2]/div/span/input','a@gmai.com');
+I.click('Create Team');
+I.click('Get Started');
+
+<<< Recorded commands on Thu Sep 10 2020 12:06:19 GMT+0600 (Bangladesh Standard Time)
+I.click('dem');
+I.click('Settings');
+I.fillField('Team Name','Demo');
+I.click('Update Team');
