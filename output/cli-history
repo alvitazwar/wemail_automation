@@ -44,3 +44,12 @@ I.click('dem');
 I.click('Settings');
 I.fillField('Team Name','Demo');
 I.click('Update Team');
+
+<<< Recorded commands on Mon Sep 28 2020 20:13:49 GMT+0600 (Bangladesh Standard Time)
+I.click('//*[@id="main"]/ul/li[1]/a[2]');
+I.click('//*[@id="main"]/ul/li[3]/a[2]');
+I.click('//*[@id="main"]/ul/li[3]/a[3]');
+I.click('//*[@id="post-157"]/div[1]/div/div/div[2]/div/div/a');
+I.fillField('First name','resync');
+I.fillField('Last name','Three');
+I.click('//*[@id="select2-billing_country-container"]');
