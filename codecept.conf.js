@@ -12,7 +12,8 @@ exports.config = {
       url: '',
       show: true,
       windowSize: '1366x768',
-      smartWait: 5000
+      smartWait: 5000,
+      waitForNavigation: [ 'domcontentloaded', 'networkidle0' ]
     }
   },
   include: {
