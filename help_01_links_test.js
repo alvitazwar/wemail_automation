@@ -1,6 +1,6 @@
 Feature('wemail_Helpmenu');
 
-Scenario('link check documentation', (I) => {
+Scenario('link check Helpmenu', (I) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');
@@ -15,6 +15,10 @@ Scenario('link check documentation', (I) => {
   I.click('//*[@id="toplevel_page_wemail"]/a/div[3]');
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/help/support');
   I.click('documentation');
-  
+  I.closeOtherTabs();
+  I.click('Frequently Asked Questions');
+  I.closeOtherTabs();
+  I.click('YouTube channel');
+
 
 });
