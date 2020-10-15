@@ -53,3 +53,6 @@ I.click('//*[@id="post-157"]/div[1]/div/div/div[2]/div/div/a');
 I.fillField('First name','resync');
 I.fillField('Last name','Three');
 I.click('//*[@id="select2-billing_country-container"]');
+
+<<< Recorded commands on Thu Oct 15 2020 15:43:19 GMT+0600 (Bangladesh Standard Time)
+I.click('//*[@id="wemail-delete-list-modal"]/div/div/form/fieldset/div[3]/button[2]');

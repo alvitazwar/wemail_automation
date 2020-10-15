@@ -7,6 +7,7 @@ Scenario('list_Insert', (I) => {
   I.fillField('Password','password');
   I.click('Log In');
   //pause();
+  I.seeElement({xpath: '//*[@id="wpbody-content"]/div[3]/h1'});
   I.waitForElement('//*[@id="toplevel_page_wemail"]/a/div[3]', 30);
   I.click('//*[@id="toplevel_page_wemail"]/a/div[3]');
   //I.click('#toplevel_page_wemail > a > div.wp-menu-name');
@@ -23,8 +24,8 @@ Scenario('list_Insert', (I) => {
   I.refreshPage();
   I.click('Add Subscribers');
   I.click('Create New Subscriber');
-  I.fillField('//*[@id="subscriber-modal-email-input"]','ac@gm.com');
-  I.fillField('First Name','ac');
+  I.fillField('//*[@id="subscriber-modal-email-input"]','edit@gm.com');
+  I.fillField('First Name','edit');
   I.click('Save');
 
 });
