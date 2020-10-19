@@ -13,7 +13,7 @@ exports.config = {
       show: true,
       windowSize: '1366x768',
       smartWait: 5000,
-      waitForAction:3000,
+      waitForAction:300,
       waitForNavigation: [ 'domcontentloaded', 'networkidle0' ]
     }
   },
@@ -22,7 +22,7 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  name: 'Codecept for Appsero',
+  name: 'Wemail',
   plugins: {
     retryFailedStep: {
       enabled: true
