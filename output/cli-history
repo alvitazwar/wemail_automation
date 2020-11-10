@@ -56,3 +56,24 @@ I.click('//*[@id="select2-billing_country-container"]');
 
 <<< Recorded commands on Thu Oct 15 2020 15:43:19 GMT+0600 (Bangladesh Standard Time)
 I.click('//*[@id="wemail-delete-list-modal"]/div/div/form/fieldset/div[3]/button[2]');
+
+<<< Recorded commands on Tue Oct 27 2020 14:05:07 GMT+0600 (Bangladesh Standard Time)
+I.click('//*[@id="wpbody-content"]/div[3]/a');
+I.fillField('//*[@id="user_login"]','test_user3');
+I.fillField('//*[@id="email"]','test_user3@gmail.com');
+I.fillField('//*[@id="first_name"]','test');
+I.fillField('//*[@id="last_name"]','user3');
+I.click('Show password');
+I.fillField('//*[@id="pass1"]','test_user3');
+I.click('//*[@id="createuser"]/table/tbody/tr[8]/td/label/input');
+I.click('//*[@id="role"]');
+I.click('//*[@id="role"]');
+I.click('//*[@id="role"]');
+I.selectOption('Role','Employee');
+I.click('Add New User');
+I.click('//*[@id="createusersub"]');
+
+<<< Recorded commands on Tue Nov 10 2020 17:20:12 GMT+0600 (Bangladesh Standard Time)
+I.fillField('Name','Automated creation');
+I.fillField('Description','Automated creation description');
+I.click('Save');

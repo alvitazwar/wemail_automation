@@ -16,6 +16,7 @@ Scenario('link check Mailsend', (I) => {
   I.fillField('//*[@id="wemail-admin"]/div//div[2]/input','abc@gmail.com');
   I.fillField('//*[@id="wemail-admin"]/div//div[2]/textarea','Demo Test');
   I.click('Send');
+  I.see()
   I.wait(5);
 
 

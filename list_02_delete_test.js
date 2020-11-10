@@ -2,19 +2,17 @@ Feature('wemail_list_insert');
 
 Scenario('list_delete', (I) => {
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
-  //I.see('GitHub');
+
   I.fillField('Username','alvitazwar');
   I.fillField('Password','password');
   I.click('Log In');
-
-  //pause();
-  I.seeElement({xpath:'//*[@id="wpbody-content"]/div[3]/h1'});
-  I.waitForElement('//*[@id="toplevel_page_wemail"]/a/div[3]', 30);
+  I.wait(15);
+  I.see('Good');
   I.click('//*[@id="toplevel_page_wemail"]/a/div[3]');
   //I.click('#toplevel_page_wemail > a > div.wp-menu-name');
   //I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/');
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/lists');
-  I.moveCursorTo('tr:nth-of-type(1) .list-table-title');
+  I.moveCursorTo('tr:nth-of-type(2) .list-table-title');
   I.waitForElement('//*[@id="wemail-admin"]/div/div[1]/table/tbody/tr[1]/td[2]/ul/li[3]/a',50);
   I.forceClick('//*[@id="wemail-admin"]/div/div[1]/table/tbody/tr[1]/td[2]/ul/li[3]/a');
   //I.waitForElement('//*[@id="list-modal-name-input"]',30);
