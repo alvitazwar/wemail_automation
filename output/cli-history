@@ -77,3 +77,23 @@ I.click('//*[@id="createusersub"]');
 I.fillField('Name','Automated creation');
 I.fillField('Description','Automated creation description');
 I.click('Save');
+
+<<< Recorded commands on Wed Nov 18 2020 09:20:00 GMT+0600 (Bangladesh Standard Time)
+I.click(' div.wemail-list-table-2.wp-list-table-lists > div:nth-child(2) > div.list-table-filter-dropdowns.float-left > div > select');
+I.click(' div.wemail-list-table-2.wp-list-table-lists > div:nth-child(2) > div.list-table-filter-dropdowns.float-left > div > select');
+I.selectOption('div.wemail-list-table-2.wp-list-table-lists > div:nth-child(2) > div.list-table-filter-dropdowns.float-left > div > select','Delete');
+I.click('Apply');
+I.click('div.wemail-modal-footer > button.button.button-error');
+
+<<< Recorded commands on Wed Nov 18 2020 11:20:36 GMT+0600 (Bangladesh Standard Time)
+I.click('//*[@id="wemail-admin"]/div/h1/span');
+I.click('Manage Segment');
+I.click('#wemail-manage-segment-modal form fieldset > div.wemail-modal-header > h5 > a');
+I.selectOption('#wemail-admin div.conditions > div.condition > div:nth-child(1) > select','First Name');
+I.fillField(' div.conditions > div.condition > div:nth-child(3) > input','al');
+I.click('Create');
+I.fillField('div  form > div > div.mt-2 > input','automated');
+I.click('Save');
+I.selectOption('div.list-table-filter-dropdowns.float-left > div:nth-child(2) > select','automated');
+I.click('Filter');
+I.click('Clear Segment');
