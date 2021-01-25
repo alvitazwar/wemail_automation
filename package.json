@@ -9,5 +9,13 @@
         "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
         "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
+    },
+    "dependencies": {
+        "codeceptjs": "^3.0.4",
+        "puppeteer": "^5.5.0"
+    },
+    "devDependencies": {
+        "faker": "^5.1.0",
+        "rosie": "^2.0.1"
     }
 }

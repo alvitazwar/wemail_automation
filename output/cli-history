@@ -97,3 +97,8 @@ I.click('Save');
 I.selectOption('div.list-table-filter-dropdowns.float-left > div:nth-child(2) > select','automated');
 I.click('Filter');
 I.click('Clear Segment');
+
+<<< Recorded commands on Mon Jan 25 2021 16:46:55 GMT+0600 (Bangladesh Standard Time)
+I.click('Card Number');
+I.type('42424242424242424242')
+I.logout

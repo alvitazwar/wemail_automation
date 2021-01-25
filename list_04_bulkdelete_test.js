@@ -1,6 +1,6 @@
 Feature('wemail_list_feature');
 
-Scenario('list_bulk_delete', (I) => {
+Scenario('list_bulk_delete', ({ I }) => {
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 
   I.fillField('Username','alvitazwar');

@@ -1,6 +1,6 @@
 Feature('wemail_list_create');
 
-Scenario('Form_Creation', (I) => {
+Scenario('Form_Creation', ({ I }) => {
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');
   I.fillField('Username','alvitazwar');

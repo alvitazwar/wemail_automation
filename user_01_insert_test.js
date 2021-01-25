@@ -1,6 +1,6 @@
 Feature('wemail_users');
 
-Scenario('user add new User', (I) => {
+Scenario('user add new User', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 
@@ -10,7 +10,6 @@ Scenario('user add new User', (I) => {
 
   //I.seeElement({xpath: '//*[@id="wpbody-content"]/div[3]/h1'});
   I.wait(15);
-  I.see('Good');
   I.click('Users');
   I.click('//*[@id="wpbody-content"]/div[3]/a');
   I.fillField('//*[@id="user_login"]','test_user3');

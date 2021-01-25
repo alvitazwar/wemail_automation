@@ -1,6 +1,6 @@
 Feature('wemail_Helpmenu');
 
-Scenario('link check Mailsend', (I) => {
+Scenario('link check Mailsend', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 

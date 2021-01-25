@@ -1,6 +1,6 @@
 Feature('wemail_list');
 
-Scenario('list_Insert_tag', (I) => {
+Scenario('list_Insert_tag', ({ I }) => {
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 
   I.fillField('Username','alvitazwar');

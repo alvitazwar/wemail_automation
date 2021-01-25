@@ -1,6 +1,6 @@
 Feature('wemail_team');
 
-Scenario('team check enable-disable button', (I) => {
+Scenario('team check enable-disable button', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 

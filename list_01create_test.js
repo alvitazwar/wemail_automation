@@ -1,6 +1,6 @@
 Feature('wemail_list_create');
 
-Scenario('list_Create', (I) => {
+Scenario('list_Create', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');

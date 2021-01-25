@@ -1,6 +1,6 @@
 Feature('wemail_Helpmenu');
 
-Scenario('help check connection', (I) => {
+Scenario('help check connection', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 

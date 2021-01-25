@@ -1,6 +1,6 @@
 Feature('wemail_Helpmenu');
 
-Scenario('link check Helpmenu', (I) => {
+Scenario('link check Helpmenu', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');
