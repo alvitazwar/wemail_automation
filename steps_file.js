@@ -8,6 +8,11 @@ module.exports = function() {
     this.fillField('Username', 'alvitazwar');
     this.fillField('Password','password');
     this.click('Log In');
+  },
+  checkError: function () {
+    this.dontSee('Warning');
+    this.dontSee('Fatal error');
+    this.dontSee('Notice:');
   }
     // Define custom steps here, use 'this' to access default methods of I.
     // It is recommended to place a general 'login' function here.
