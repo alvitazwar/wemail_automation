@@ -57,6 +57,17 @@ Scenario('product edit explore test', ({ I }) => {
     I.seeElementInDOM('a.dokan-btn.dokan-btn-default.dokan-btn-theme.dokan-save-attribute');
     //RMA
     I.seeElementInDOM('div.dokan-rma-options.dokan-edit-row.dokan-clearfix > div.dokan-section-heading');
+    I.seeElementInDOM('div.dokan-rma-options.dokan-edit-row.dokan-clearfix > div.dokan-section-content');
+    //Other Options
+    I.seeElementInDOM('div.dokan-other-options.dokan-edit-row.dokan-clearfix > div.dokan-section-heading');
+    I.see('Product Status');
+    I.see('Visibility');
+    I.seeElementInDOM('#post_status');
+    I.seeElementInDOM('#_visibility');
+    I.see('Purchase Note');
+    I.seeElementInDOM('div.dokan-section-content > div:nth-child(5) > label');
+    console.log('All Elemennts Are present');
+
 
 
 
