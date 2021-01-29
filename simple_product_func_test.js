@@ -1,3 +1,6 @@
+const helpers = require("./helpers");
+
+//const helper = require('./helpers');
 Feature('Simple product fucntionality');
 
 Scenario('simple product functional', ({ I }) => {
@@ -11,7 +14,12 @@ Scenario('simple product functional', ({ I }) => {
     I.click('simple_pro_1');
 //Product Functionality Check
     //Product functionality with lower price than discount price
-    I.checkWrongPrice();
-        
+    // helpers.setregularprice();
+    // helpers.checkWrongPrice();
+    // helpers.checksinglecat();
+    // helpers.checkmulticat();
+    helpers.checktags();
+    // //Category 
+    //I.checkCategory();
 
 });

@@ -2,6 +2,9 @@
 
 module.exports = function() {
   return actor({
+    // Define custom steps here, use 'this' to access default methods of I.
+    // It is recommended to place a general 'login' function here.
+    
     loginAsAdmin: function () {
     this.amOnPage('https://stagingwp.getwemail.io/wp-admin');
     //this.click('Log in');
@@ -13,17 +16,15 @@ module.exports = function() {
     this.dontSee('Warning');
     this.dontSee('Fatal error');
     this.dontSee('Notice:');
-  },checkWrongPrice:function(){
-    this.fillField('Price','2');
-    this.fillField('Discounted Price','15');
-    this.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
-    this.see('Success! The product has been saved successfully.');
-    console.log('Price should not be lower than discount price');
-    
-  }
-
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
-    
+  },
+  checkWrongPrice()
+{ 
+  this.fillField('Price','12');
+  //this.fillField('Discounted Price','15');
+  this.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');  
+  this.see('Success! The product has been saved successfully.');
+  console.log('Price should not be lower than discount price. Validation neededs');
+}
+   
   });
 }

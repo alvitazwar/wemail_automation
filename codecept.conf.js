@@ -23,7 +23,8 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+    helpers: './helpers.js'   
   },
   bootstrap: null,
   mocha: {},
