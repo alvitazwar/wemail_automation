@@ -24,6 +24,9 @@ module.exports = function() {
   this.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');  
   this.see('Success! The product has been saved successfully.');
   console.log('Price should not be lower than discount price. Validation neededs');
+},saveProduct()
+{
+    I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');  
 }
    
   });

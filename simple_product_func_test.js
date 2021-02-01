@@ -1,3 +1,5 @@
+var Factory = require('rosie').Factory;
+var faker = require('faker');
 const helpers = require("./helpers");
 
 //const helper = require('./helpers');
@@ -18,8 +20,18 @@ Scenario('simple product functional', ({ I }) => {
     // helpers.checkWrongPrice();
     // helpers.checksinglecat();
     // helpers.checkmulticat();
-    helpers.checktags();
-    // //Category 
+    //helpers.checktags();
+    //Category 
     //I.checkCategory();
+    //Short Description + Description
+    // helpers.shortDesc();
+    // helpers.desc();
+    // helpers.clearDesc();
+    // helpers.shortDesc();
+    // helpers.desc();
+    // Wholesale product
+    helpers.wholesale();
+    helpers.clearwholesale();
+    helpers.wholesale();
 
 });

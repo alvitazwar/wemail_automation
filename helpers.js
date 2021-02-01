@@ -1,3 +1,5 @@
+var Factory = require('rosie').Factory;
+var faker = require('faker');
 const {I}= inject();
 module.exports =  {
     
@@ -7,6 +9,8 @@ module.exports =  {
       I.fillField('Discounted Price','15');
       I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
     },
+    
+
     checkWrongPrice()
     { 
       I.fillField('Price','12');
@@ -37,12 +41,75 @@ module.exports =  {
   checktags()
   { 
     I.click('div:nth-child(6) > span > span.selection > span');
-    I.type('div:nth-child(6) > span > span.selection > span','single');
+    I.fillField('div:nth-child(6) > span > span.selection > span > ul > li > input','single');
+    I.wait(2);
+    //I.click('li.select2-results__option.select2-results__option--highlighted');
     I.pressKey('Enter');
-    return ;
-    console.log("executed it");
-    console.log(retur)
+    I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
+    I.wait(5);
+    //I.clearField('div:nth-child(6) > span > span.selection > span > ul > li > input');
+    I.click('div:nth-child(6) > span > span.selection > span');
+    I.fillField('div:nth-child(6) > span > span.selection > span > ul > li > input','gadgets');
+    I.wait(2);
+    I.pressKey('Enter');
+    I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');  
+    I.wait(5);
+  },
+  shortDesc()
+  { var sdesc = faker.lorem.sentences();
+      I.scrollTo('div > form > div.dokan-product-short-description > label');
+      within({frame:'#post_excerpt_ifr'}, () => {
+        I.fillField('//body[@id="tinymce" and @data-id="post_excerpt"]',sdesc);  
+      });
+      I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
+      I.wait(4); 
+  },
+  desc()
+  {
+    var desc = faker.lorem.text();
+    I.scrollTo('div.dokan-product-description > label');
+    within({frame:'#post_content_ifr'}, () => {
+      I.fillField('//body[@id="tinymce" and @data-id="post_content"]',desc);  
+    });
+    I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
+    I.wait(4);
+  },
+  clearDesc()
+  {
+      I.scrollTo('div > form > div.dokan-product-short-description > label');
+      within({frame:'#post_excerpt_ifr'}, () => {
+        I.wait(2);
+        I.click('//body[@id="tinymce" and @data-id="post_excerpt"]');
+        I.pressKey(['CommandOrControl','A']);
+        I.pressKey('Delete');
+        I.wait(2);  
+      });
+      within({frame:'#post_content_ifr'},() =>
+      {   I.wait(2);      
+          I.click('//body[@id="tinymce" and @data-id="post_content"]');
+          I.pressKey(['CommandOrControl','A']);
+          I.pressKey('Delete');
+          I.wait(2);  
+      });
+      I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
+      I.wait(3);
+  },
+  wholesale()
+  { 
+      I.scrollTo('div.dokan-wholesale-options.dokan-edit-row.dokan-clearfix.show_if_simple');
+      I.checkOption('//*[@id="wholesale[enable_wholesale]"]');  
+      I.fillField('#dokan-wholesale-price',faker.random.number(10,20));
+      I.fillField('#dokan-wholesale-qty',faker.random.number(5,10));
+      I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
+      I.wait(3);
+  },
+  clearwholesale()
+  {  I.scrollTo('div.dokan-wholesale-options.dokan-edit-row.dokan-clearfix.show_if_simple');
+     I.clearField('#dokan-wholesale-price');
+     I.clearField('#dokan-wholesale-qty');
+     I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');  
+     I.wait(2);
   }
-
+  
 }  
 

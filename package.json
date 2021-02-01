@@ -15,7 +15,7 @@
         "puppeteer": "^5.5.0"
     },
     "devDependencies": {
-        "faker": "^5.1.0",
+        "faker": "^5.2.0",
         "rosie": "^2.0.1"
     }
 }
