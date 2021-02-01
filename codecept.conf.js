@@ -1,4 +1,6 @@
-const { setHeadlessWhen } = require('@codeceptjs/configure');
+const {
+  setHeadlessWhen
+} = require('@codeceptjs/configure');
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
@@ -18,13 +20,14 @@ exports.config = {
       show: true,
       windowSize: '1440x1024',
       smartWait: 5000,
-      waitForAction:100,
-      waitForNavigation: [ 'domcontentloaded', 'networkidle0' ]
-    }
+      waitForAction: 100,
+      waitForNavigation: ['domcontentloaded', 'networkidle0']
+    },
+
   },
   include: {
     I: './steps_file.js',
-    helpers: './helpers.js'   
+    helpers: './helpers.js'
   },
   bootstrap: null,
   mocha: {},
@@ -35,7 +38,10 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: false
+    },
+    tryTo: {
+      enabled: true
     }
   },
-  
+
 }
