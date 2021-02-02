@@ -20,6 +20,7 @@ Scenario('simple product functional', ({
     //Product Functionality Check
     //Product functionality Price and schedule
     helpers.setSchedule();
+    helpers.cancelschedule();
     helpers.setregularprice();
     helpers.checkWrongPrice();
     //Category & Tags

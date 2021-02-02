@@ -11,8 +11,8 @@ module.exports = {
         I.fillField('Discounted Price', '15');
         I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
     },
-    setSchedule() {
 
+    cancelschedule() {
         I.seeElement('a.cancel_sale_schedule');
         I.click('a.cancel_sale_schedule');
         I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
@@ -21,7 +21,8 @@ module.exports = {
         I.fillField('_sale_price_dates_to', '2021-12-31');
         I.wait(3);
         I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
-
+    },
+    setSchedule() {
         I.click('Schedule');
         I.fillField('_sale_price_dates_from', '2021-01-01');
         I.fillField('_sale_price_dates_to', '2021-12-31');
