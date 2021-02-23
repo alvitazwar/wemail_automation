@@ -13,7 +13,7 @@ module.exports = {
     },
 
     cancelschedule() {
-        I.seeElement('a.cancel_sale_schedule');
+        I.seeElement('label > a.cancel_sale_schedule');
         I.click('a.cancel_sale_schedule');
         I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
         I.click('Schedule');
@@ -64,7 +64,7 @@ module.exports = {
         I.click('input.dokan-btn.dokan-btn-theme.dokan-btn-lg.dokan-right');
         I.see('For multiple');
     },
-    checksinglecat: function () {
+    checksinglecat: function() {
         I.click('#select2-product_cat-container');
         I.click('span > span.select2-search.select2-search--dropdown > input');
         I.fillField('span > span.select2-search.select2-search--dropdown > input', 'For single');

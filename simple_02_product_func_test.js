@@ -19,15 +19,15 @@ Scenario('simple product functional', ({
     I.wait(3);
     //Product Functionality Check
     //Product functionality Price and schedule
-    helpers.setSchedule();
-    helpers.cancelschedule();
-    helpers.setregularprice();
-    helpers.checkWrongPrice();
-    //Category & Tags
-    helpers.checksinglecat();
-    helpers.checkmulticat();
-    helpers.checktags();
-    //Short Description + Description
+    // helpers.setSchedule();
+    // helpers.cancelschedule();
+    // helpers.setregularprice();
+    // helpers.checkWrongPrice();
+    // //Category & Tags
+    // helpers.checksinglecat();
+    // helpers.checkmulticat();
+    // helpers.checktags();
+    // //Short Description + Description
     helpers.shortDesc();
     helpers.desc();
     helpers.clearDesc();
