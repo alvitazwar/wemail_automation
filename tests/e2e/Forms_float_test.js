@@ -1,6 +1,6 @@
 Feature('wemail_list_create');
 
-Scenario('Form_Creation', (I) => {
+Scenario('Form_Creation', ({ I }) => {
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');
   I.fillField('Username','alvitazwar');
@@ -13,8 +13,8 @@ Scenario('Form_Creation', (I) => {
   I.waitForElement('//*[@id="wemail-admin"]/div/h1/a[1]',30);
   I.click('//*[@id="wemail-admin"]/div/h1/a[1]');
   I.waitForElement('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[1]/input',30);
-  I.fillField('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[1]/input','Modal');
-  I.click('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[2]/div/div[4]/a/span[1]'); //Select form type
+  I.fillField('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[1]/input','Float');
+  I.click('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[2]/div/div[2]/a/span[1]'); //Select form type
   I.click('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[3]/div/div/div[2]'); //Select list_Create
   //I.waitForElement('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[3]/div/div/div[3]/ul/li[12]/span',30);
   I.click('//*[@id="wemail-admin"]/div/div[2]/div/div/form/fieldset/div[2]/label[3]/div/div/div[3]/ul/li[12]/span');
@@ -24,6 +24,6 @@ Scenario('Form_Creation', (I) => {
   I.waitForElement('//*[@id="wemail-form-customizer"]/div[1]/div[2]/button',30);
   I.click('//*[@id="wemail-form-customizer"]/div[1]/div[2]/button');
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/forms');
-  I.see('Modal');
+  I.see('Float');
 
 });

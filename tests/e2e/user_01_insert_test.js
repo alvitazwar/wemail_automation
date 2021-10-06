@@ -1,6 +1,6 @@
 Feature('wemail_users');
 
-Scenario('user add new User', (I) => {
+Scenario('user add new User', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
 

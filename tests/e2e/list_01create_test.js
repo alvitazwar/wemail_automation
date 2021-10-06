@@ -1,6 +1,6 @@
-Feature('wemail_Helpmenu');
+Feature('wemail_list_create');
 
-Scenario('link check Helpmenu', (I) => {
+Scenario('list_Create', ({ I }) => {
   //I.loginAsAdmin();
   I.amOnPage('https://stagingwp.getwemail.io/wp-admin');
   //I.see('GitHub');
@@ -9,17 +9,15 @@ Scenario('link check Helpmenu', (I) => {
   I.click('Log In');
   // /I.refreshPage();
   //pause();
-  I.wait(5);
   I.seeElement({xpath: '//*[@id="wpbody-content"]/div[3]/h1'});
   I.waitForElement('//*[@id="toplevel_page_wemail"]/a/div[3]', 30);
   //I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/');
   I.click('//*[@id="toplevel_page_wemail"]/a/div[3]');
-  I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/help/support');
-  I.click('documentation');
-  I.closeOtherTabs();
-  I.click('Frequently Asked Questions');
-  I.closeOtherTabs();
-  I.click('YouTube channel');
-
+  I.amOnPage('https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/lists');
+  I.waitForElement('//*[@id="wemail-admin"]/div/h1/a',30);
+  I.click('//*[@id="wemail-admin"]/div/h1/a');
+  I.waitForElement('//*[@id="list-modal-name-input"]',30);
+  I.fillField('//*[@id="list-modal-name-input"]','delete_test');
+  I.click('Save');
 
 });
